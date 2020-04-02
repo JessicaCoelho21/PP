@@ -21,14 +21,17 @@ public class Bicycle {
      * Identificador numérico da bicicleta
      */
     private int id;
+    
     /**
      * Número de velocidades
      */
     private int numberOfGears;
+    
     /**
      * Cor da bicicleta
      */
     private String mainColor;
+    
     /**
      * Diâmetro das rodas
      */
@@ -96,5 +99,4 @@ public class Bicycle {
     public final void setId(int id) {
         this.id = id;
     }
-    
 }

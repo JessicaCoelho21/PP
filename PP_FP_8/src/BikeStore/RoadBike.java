@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package BikeStore;
 
 import ficha7_enums.Material;
 import ficha7_enums.BrakeType;
 
-/**
- *
- * @author Jéssica Beatriz
- */
 public class RoadBike extends Bicycle{
     private String handlebelt;
     private int frameSize;

@@ -35,7 +35,6 @@ public class MountainBike extends Bicycle{
     /**
      * Método construtor para a criação de uma instância de
      * {@link MountainBike bicicleta de montanha} sem utensílios.
-     * 
      * @param numberOfLights Número de luzes
      * @param suspension Tipo de suspensão
      * @param id Identificador da bicicleta
