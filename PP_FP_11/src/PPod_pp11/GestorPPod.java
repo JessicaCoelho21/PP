@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PPod_pp11;
 
 import static PPod_pp11.Shuffle.orderDurationAsc;
@@ -10,10 +5,6 @@ import static PPod_pp11.Shuffle.orderDurationDesc;
 import static PPod_pp11.Shuffle.orderNameAsc;
 import static PPod_pp11.Shuffle.orderNameDesc;
 
-/**
- *
- * @author Jéssica Beatriz
- */
 public class GestorPPod implements PPod{
     private File[] file;
     private static int DEFAULT = 20;
@@ -126,7 +117,7 @@ public class GestorPPod implements PPod{
      * @param index posição da faixa a reproduzir
      */
     @Override
-    public void playTrack(int index) /*throws Extensao*/{
+    public void playTrack(int index) /*throws Extençao*/{
         /*
         //se o índice não pertencer ao limite
         if (index < -1 || index > 20) {
@@ -257,17 +248,25 @@ public class GestorPPod implements PPod{
         }
     }
     
+    /**
+     * 
+     * @param files
+     * @param type 
+     */
     public static void takeOrder(File [] files,TypeShufflePlay type){
         switch(type){
             case NameAsc:
                 orderNameAsc(files);
                 break;
+                
             case NameDesc:
                 orderNameDesc(files);
                 break;
+                
             case DurationDesc:
                 orderDurationDesc(files);
                 break;
+                
             case DurationAsc:
                 orderDurationAsc(files);
                 break;
