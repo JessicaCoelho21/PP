@@ -1,22 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Contacts;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-/**
- *
- * @author jpcm_
- */
 public class Demo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
     
         ContactManagerAPI cm = new ContactManager();
@@ -29,28 +14,31 @@ public class Demo {
         Contact ic6 = null;
         
         try {
-            ic1 = new InternationalContact("00351" , "Portugal", "João", "Moreira", "938725605");
-        } 
-        catch (StartsWithException  | LengthException ex) {
-            System.out.println(ex);
-        }
-        try {
-            ic2 = new InternationalContact("0034" , "Espanha", "Catarina", "Moreira", "919081292");;
+            ic1 = new InternationalContact("00351" , "Portugal", "Jéssica", "Coelho", "123456789");
         } catch (StartsWithException  | LengthException ex) {
             System.out.println(ex);
         }
+        
         try {
-            ic3 = new InternationalContact("0049" , "Alemanha", "Pedro", "Moreira", "938725604");
+            ic2 = new InternationalContact("0034" , "Espanha", "Antonio", "Carabajal", "987654321");;
         } catch (StartsWithException  | LengthException ex) {
             System.out.println(ex);
         }
+        
         try {
-            ic4 = new InternationalContact("0033" , "França", "Tiago", "Oliveira", "918725605");
+            ic3 = new InternationalContact("0049" , "Alemanha", "Evelyn", "Von Hardenburg", "876543210");
         } catch (StartsWithException  | LengthException ex) {
             System.out.println(ex);
         }
+        
         try {
-            nc5 = new NationalContact("João", "Moreira","938725605");
+            ic4 = new InternationalContact("0033" , "França", "Jean-François", "Vérany", "012345678");
+        } catch (StartsWithException  | LengthException ex) {
+            System.out.println(ex);
+        }
+        
+        try {
+            nc5 = new NationalContact("Jéssica", "Coelho","987654321");
         } catch (StartsWithException  | LengthException ex) {
             System.out.println(ex);
         }
@@ -64,44 +52,35 @@ public class Demo {
         
         try{
             cm.removeContact(ic1);
-        }
-        
-        catch(NullPointerException ex ){
+        } catch(NullPointerException ex ){
             System.out.println(ex);
         }
         
-        System.out.println("\n JÁ REMOVI !! \n");
-        
+        System.out.println("\nRemovido!!\n");
         System.out.println(cm.listAllContacts());
         
         try{
             cm.removeContact(ic2);
-        }
-        
-        catch(NullPointerException ex ){
+        } catch(NullPointerException ex ){
             System.out.println(ex);
         }
         
-        System.out.println("\n JÁ REMOVI !! \n");
+        System.out.println("\nRemovido!!\n");
         
         try{
             cm.addContact(ic6);
-        }
-        
-        catch(NullPointerException ex){
+        } catch(NullPointerException ex){
             System.out.println(ex);
         }
 
-        System.out.println("ADICIONEI UM NULO PÓ CARALHO");
+        System.out.println("...");
         
         System.out.println(cm.listAllContacts());
         
         for(int i = 0; i < 5; i++){
             try{
                 cm.addContact(ctct[i]);
-            }
-            
-            catch(NullPointerException ex){
+            } catch(NullPointerException ex){
                 System.out.println(ex);
             }
         }
@@ -110,7 +89,7 @@ public class Demo {
         
         cm.removeContact(ic3);
         
-        System.out.println("REMOVI O PEDRO");
+        System.out.println("\nRemovido!!\n");
         
         System.out.println(cm.listAllContacts());
     }

@@ -1,18 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Contacts;
 
 import java.util.Objects;
 
-/**
- *
- * @author jpcm_
- */
 public abstract class Contact {
-    
     private String name;
     private String surname;
     private String number;
@@ -128,6 +118,7 @@ public abstract class Contact {
         s += "Name: " + this.name + "\n";
         s += "Surname: " + this.surname + "\n";
         s += "Number: " + this.number + "\n";
+        
         return s;
     }
 

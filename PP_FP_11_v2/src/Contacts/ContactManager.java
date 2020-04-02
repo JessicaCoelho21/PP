@@ -1,17 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Contacts;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-/**
- *
- * @author jpcm_
- */
 public class ContactManager implements ContactManagerAPI{
     
     private Contact [] contacts ;
@@ -35,9 +23,7 @@ public class ContactManager implements ContactManagerAPI{
                 //o contacto fica com o contacto da posição seguinte, e o último fica a null
                 this.contacts[i] = this.contacts[i + 1];
                 this.contacts[i + 1] = null;
-            }
-            
-            else{
+            } else{
                 break;
             }
         }
@@ -83,6 +69,7 @@ public class ContactManager implements ContactManagerAPI{
         contacts[position] = null;
         //o contacto na posição i + 1 passará para a posição i no método orderContacts()
         orderContacts(position);
+        
         return true; 
     }
     
@@ -111,9 +98,11 @@ public class ContactManager implements ContactManagerAPI{
                this.contacts[i] = null;
                //o contacto na posição i + 1 passará para a posição i no método orderContacts()
                orderContacts(i);
+               
                return true;
             }
         }
+        
         return false;
     }
 
@@ -131,9 +120,7 @@ public class ContactManager implements ContactManagerAPI{
             if(this.contacts[i] != null){
                 s += "Index[" + i + "] : \n";
                 s += contacts[i].toString()+"\n\n";        
-            }
-            
-            else{
+            } else{
                 break;
             }
         }
@@ -154,16 +141,13 @@ public class ContactManager implements ContactManagerAPI{
             //se o contacto na posição i for diferente de null
             if(this.contacts[i] != null){
                 pF++;
-            }
-            
-            else{
+            } else{
                 break;
             }
         }
         
         return pF;
     }
-
 
     /**
      * Método que troca a ordem dos contactos
@@ -254,6 +238,7 @@ public class ContactManager implements ContactManagerAPI{
                 }
             }
         }
+        
         return true;
     }
 
