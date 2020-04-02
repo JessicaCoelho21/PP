@@ -1,17 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pp_fp_9;
 
 import enums.Genero;
 
-
-/**
- *
- * @author Jéssica Beatriz
- */
 public abstract class Animal {
     private int id;
     private String nome;
@@ -20,7 +10,6 @@ public abstract class Animal {
 
     /**
      * Método construtor
-     * 
      * @param id
      * @param nome
      * @param genero
@@ -35,7 +24,6 @@ public abstract class Animal {
 
     /**
      * Método de acesso getter
-     * 
      * @return 
      */
     public int getId() {
@@ -44,7 +32,6 @@ public abstract class Animal {
 
     /**
      * Método de acesso setter
-     * 
      * @param id 
      */
     public void setId(int id) {
@@ -53,7 +40,6 @@ public abstract class Animal {
 
     /**
      * Método de acesso getter
-     * 
      * @return 
      */
     public String getNome() {
@@ -62,7 +48,6 @@ public abstract class Animal {
 
     /**
      * Método de acesso setter
-     * 
      * @param nome 
      */
     public void setNome(String nome) {
@@ -71,7 +56,6 @@ public abstract class Animal {
 
     /**
      * Método de acesso getter
-     * 
      * @return 
      */
     public Genero getGenero() {
@@ -79,17 +63,25 @@ public abstract class Animal {
     }
 
     /**
-     * 
+     * Método de acesso setter
      * @param genero 
      */
     public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
+    /**
+     * Método de acesso getter
+     * @return 
+     */
     public int getIdade() {
         return idade;
     }
 
+    /**
+     * Método de acesso setter
+     * @param idade 
+     */
     public void setIdade(int idade) {
         this.idade = idade;
     }

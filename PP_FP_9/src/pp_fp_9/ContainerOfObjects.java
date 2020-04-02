@@ -1,21 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pp_fp_9;
 
-/**
- *
- * @author Jéssica Beatriz
- */
 public class ContainerOfObjects {
     private final int DEFAULT_SIZE = 100;
     private Object objects[];
     
     /**
      * Construtor que permite a instanciação da classe tendo por base um vetor de elementos recebido
-     * 
      * @param objects Lista de objetos sem tamanho fixo
      */
     public ContainerOfObjects(Object[] objects){
@@ -31,7 +21,6 @@ public class ContainerOfObjects {
     
     /**
      * Cosntrutor que permite a instanciação da classe definindo um valo máximo de elementos
-     * 
      * @param maxSize número máximo de elementos permitidos no vetor
      */
     public ContainerOfObjects(int maxSize){
@@ -40,7 +29,6 @@ public class ContainerOfObjects {
     
     /**
      * Método que procura a primeira posição livre do vetor de objetos
-     * 
      * @return a primeira posição livre do vetor
      */
     protected int procuraPosicaoLivre(){
@@ -58,15 +46,13 @@ public class ContainerOfObjects {
     
     /**
      * Método que verifica se uma certa posição está ou não nula
-     * 
      * @param position para a posição que se pretende verificar
      * @return se a pusição está o não vazia
      */
     protected boolean isNull(int position){
         if(this.objects[position] == null) {
             return true;
-        }
-        else{
+        } else{
             return false;
         }
     }
@@ -74,7 +60,6 @@ public class ContainerOfObjects {
     /**
      * Método responsável por inserir um {@link Object objeto} na coleção de
      * {@link ContainerOfObjects#objects objetos}
-     * 
      * @param newObject {@link Object objeto} a inserir no vetor
      * @return valor booleano que sinaliza o sucesso/insucesso da operação
      */
@@ -83,9 +68,7 @@ public class ContainerOfObjects {
         
         if(pos == -1){
             return false;
-        }
-        
-        else{
+        } else{
             this.objects[pos] = newObject;
             return true;
         }
@@ -94,7 +77,6 @@ public class ContainerOfObjects {
     /**
      * Método responsável por remover um {@link Object objeto} do vetor de
      * {@link  ContainerOfObjects#objects objetos}
-     * 
      * @param position indice correspondente ao elemento a eliminar
      * @return  o {@link Object objeto} eliminado
      */
@@ -106,9 +88,7 @@ public class ContainerOfObjects {
         
         if(isNull){
             return null;
-        }
-        
-        else{
+        } else{
             for (i = position; i < this.objects.length - 1 && objects[i] != null; i++) {
                 this.objects[i] = this.objects[i + 1];
             }
@@ -121,10 +101,8 @@ public class ContainerOfObjects {
     /**
      * Método responsável por substituir um {@link Object objeto} no vetor de
      * {@link ContainerOfObjects#objects objetos}
-     * 
      * @param position índice correspondente ao elemento a modificar
      * @param newObject novo objeto a colocar no vetor
-     * 
      * @return valor booleano que sinaliza o sucesso/insucesso da operação
      */
     protected boolean setObject(int position, Object newObject){
@@ -132,9 +110,7 @@ public class ContainerOfObjects {
         
         if (isNull) {
             return false;
-        }
-        
-        else{
+        } else{
             this.objects[position] = newObject;
             return true;
         }
@@ -143,7 +119,6 @@ public class ContainerOfObjects {
     /**
      * Método responsável por encontrar um {@link Object objeto} no vetor de
      * {@link ContainerOfObjects#objects objetos}
-     * 
      * @param obj
      * @return 
      */
@@ -159,7 +134,6 @@ public class ContainerOfObjects {
 
     /**
      * Define o tamanho do array de bicicletas
-     * 
      * @return a última posição livre do array de bicicletas
      */
     int size() {
@@ -168,7 +142,6 @@ public class ContainerOfObjects {
     
     /**
      * Obter todos os objetos do array
-     * 
      * @return 
      */
     protected Object[] getAllObj(){
